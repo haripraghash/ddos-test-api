@@ -12,8 +12,9 @@ namespace ddos_test_api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
+            await Task.Delay(500);
             return new string[] { "value1", "value2" };
         }
 
