@@ -4,11 +4,18 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <RootNamespace>ddos_test_api</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/ce38cf7c-3580-4375-b891-13a38abb98be/resourcegroups/test-ddos-eun-resgrp/providers/microsoft.insights/components/testddos-appinsights</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/ce38cf7c-3580-4375-b891-13a38abb98be/resourcegroups/test-ddos-eun-resgrp/providers/microsoft.insights/components/testddos-appinsights</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>

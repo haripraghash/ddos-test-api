@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +13,9 @@ namespace ddos_test_api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<string>>> Get()
+        public ActionResult<IEnumerable<string>> Get()
         {
-            await Task.Delay(500);
+            Trace.WriteLine($"hello");
             return new string[] { "value1", "value2" };
         }
 
